@@ -1,6 +1,11 @@
+
 exports.min = function min (array) {
-  if (array.length == 0 || arguments.length === 0) {
-      return 0
+  if(Array.isArray(array)) {
+      if(array.length === 0) {
+          return 0
+      }
+  } else if(arguments.length === 0){
+    return 0
   }
 
   let min = array[0]
@@ -15,8 +20,12 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-    if (array.length == 0 || arguments.length === 0) {
-        return 0
+    if(Array.isArray(array)) {
+        if(array.length === 0) {
+            return 0
+        }
+    } else if(arguments.length === 0){
+      return 0
     }
 
     let max = array[0]
@@ -31,8 +40,12 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-    if (array.length == 0 || arguments.length === 0) {
-        return 0
+    if(Array.isArray(array)) {
+        if(array.length === 0) {
+            return 0
+        }
+    } else if(arguments.length === 0){
+      return 0
     }
 
     let avg = 0
